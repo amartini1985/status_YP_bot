@@ -1,6 +1,2 @@
-class TokenUnavailableError(Exception):
-    pass
-
-
 class StatusError(Exception):
-    pass
+    """Ошибка статуса 200."""
