@@ -66,11 +66,11 @@ def get_api_answer(timestamp):
             f'URL: {ENDPOINT}, заголовок: {HEADERS}, время: {payload}'
         )
         raise ConnectionError(
-            f'Ошибка при запросе к основному API: {error}, ' + param_error
+            f'Ошибка при запросе к основному API: {error}, {param_error}'
         )
     if response.status_code != HTTPStatus.OK:
         raise StatusError(
-            f'Отсутствие данных: {response.status_code}, ' + param_error
+            f'Отсутствие данных: {response.status_code}, {param_error}'
         )
     logging.debug('Запрос к эндпойнту - успешен')
     return response.json()
